@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitl clock</title>
+
+</head>
+
+<body style="background-color: black;">
+
+    <div style="margin-top: 250px; font-size:70px; font-family:Arial, Helvetica, sans-serif; color: red;">
+      <center>
+        <span id="x">
+            
+        </span>
+      </center>
+    </div>
+    
+
+
+    <script>
+        function printTimer() {
+            var time = new Date();
+            console.log(time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds());
+            var x=time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds()
+            document.getElementById('x').innerHTML=x;
+        }
+        printTimer();
+        const startTimer = () => {
+            setInterval(printTimer, 1000);
+        }
+        startTimer();
+    </script>
+</body>
+
+</html>
